@@ -45,11 +45,11 @@ Let's see how changing the THS 9th grade students scores to NaN affected summary
     ```
     per_school_summary_df.loc[["Thomas High School"]]
     ```
-    ![THS_Summary_Original](Resources/THS_Summary_Original.png)
+    ![THS_Summary_Original](Resources/THS_Summary_Original.PNG)
 
     After just removing altered scores we will get below results for THS:
 
-    ![THS_Summary_Updated_1](Resources/THS_Summary_Updated_1.png)
+    ![THS_Summary_Updated_1](Resources/THS_Summary_Updated_1.PNG)
 
     We can see that average math and reading scores changed but not critical. This is because `mean()` function doesn't include NaN results by default. But passing math, reading and overall passing percentage results are decreased significantly. This happened because we calculated percentage using `per_school_counts` variable that equals to the count of all students in the school - including 9th grade:
 
@@ -68,7 +68,7 @@ Let's see how changing the THS 9th grade students scores to NaN affected summary
     ```
     To remove this huge changing we need to correct percentage calculations for THS, dividing not by the total count of students but by count of 10th - 12th graders only. After that we can replace final percentages for THS in the school summary DataFrame:
 
-    ![THS_Calculations_upd](Resources/THS_Calculations_upd.png)
+    ![THS_Calculations_upd](Resources/THS_Calculations_upd.PNG)
 
     Average math score dropped a little bit - means that 9th grade students had higher average math scores than other grades students and removing their scores from the analysis caused this decrease on updated results.
 
@@ -76,7 +76,7 @@ Let's see how changing the THS 9th grade students scores to NaN affected summary
     
     Passing math, reading and overall passing percentage results for Thomas High School decreased on updated results but after corrected calculations at an acceptable level. 
 
-    ![THS_Summary_Updated_2](Resources/THS_Summary_Updated_2.png)
+    ![THS_Summary_Updated_2](Resources/THS_Summary_Updated_2.PNG)
 
     Changing grades for THS students didn't affect other school results:
 
@@ -88,32 +88,32 @@ Let's see how changing the THS 9th grade students scores to NaN affected summary
 
     ***High permorming schools (original results):***
 
-    ![Top5_original](Resources/Top5_original.png)
+    ![Top5_original](Resources/Top5_original.PNG)
 
     ***High permorming schools (updated results):***
 
-    ![Top5_updated](Resources/Top5_updated.png)
+    ![Top5_updated](Resources/Top5_updated.PNG)
 
     ***Low permorming schools (original results):***
 
-    ![Bottom5_original](Resources/Bottom5_original.png)
+    ![Bottom5_original](Resources/Bottom5_original.PNG)
 
     ***Low permorming schools (updated results):***
 
-    ![Bottom5_updated](Resources/Bottom5_updated.png)
+    ![Bottom5_updated](Resources/Bottom5_updated.PNG)
 
 - How does replacing the ninth-grade scores affect the following:
     - Math and reading scores by grade
 
         The only difference that we can see for math scores is that for THS 9th grade shows NaN on updated results:
 
-        ![Math_byGrade_original](Resources/Math_byGrade_original.png)
-        ![Math_byGrade_updated](Resources/Math_byGrade_updated.png)
+        ![Math_byGrade_original](Resources/Math_byGrade_original.PNG)
+        ![Math_byGrade_updated](Resources/Math_byGrade_updated.PNG)
 
         The same is for reading scores - THS 9th grade shows NaN and other schools / grades were not affected:
 
-        ![Reading_byGrade_original](Resources/Reading_byGrade_original.png)
-        ![Reading_byGrade_updated](Resources/Reading_byGrade_updated.png)
+        ![Reading_byGrade_original](Resources/Reading_byGrade_original.PNG)
+        ![Reading_byGrade_updated](Resources/Reading_byGrade_updated.PNG)
 
     - Scores by school spending
 
@@ -135,11 +135,11 @@ Let's see how changing the THS 9th grade students scores to NaN affected summary
 
         ***Spending Ranges (Per Student) (original results):***
 
-        ![PerStudentSpending_Original](Resources/PerStudentSpending_Original.png)
+        ![PerStudentSpending_Original](Resources/PerStudentSpending_Original.PNG)
 
         ***Spending Ranges (Per Student) (updated results):***
 
-        ![PerStudentSpending_Updated](Resources/PerStudentSpending_Updated.png)
+        ![PerStudentSpending_Updated](Resources/PerStudentSpending_Updated.PNG)
 
     - Scores by school size
 
